@@ -129,15 +129,13 @@ Standalone functions (not tied to any one class) live in `analysis.py`:
 
 ## 6. Installation and running instructions
 
-Requires Python 3.9+ and no third-party packages.
+Requires Python 3.9+.
 
 ```bash
 git clone https://github.com/USERNAME/REPOSITORY.git
 cd REPOSITORY
 python3 main.py
 ```
-
-(If your system uses `python` instead of `python3`, run `python main.py`.)
 
 To run the test suite:
 
@@ -170,20 +168,4 @@ trust), which is below the minimum needed to classify this session.
 
 The full output for all five scenarios is produced by `python3 main.py`.
 
-## 8. Known limitations
 
-- The classification thresholds (heart-rate delta and activity-level
-  bands) are fixed constants tuned against the supplied data generator's
-  scenario distributions rather than derived from any external clinical
-  reference; a real deployment would likely calibrate them per
-  participant.
-- Recovery detection compares only the first and last ~30% of a session
-  and assumes observations are already in timestamp order; it is not
-  designed to detect multiple activity/recovery cycles within a single
-  session.
-- Observations are validated per-field independently; there is no
-  cross-field plausibility check (e.g. very high heart rate together with
-  very low activity is not flagged as internally inconsistent, only each
-  field's own range is checked).
-- `signal_quality` below the reliability threshold causes an observation
-  to be excluded from analysis entirely; it is not partially weighted.
