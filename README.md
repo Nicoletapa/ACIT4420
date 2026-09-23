@@ -3,11 +3,9 @@
 **Assignment:** Python Programming Assignment (I) — Object-Oriented Analysis Systems
 **Selected option:** Option A — Smart Fitness Session Analyzer
 
-**Student name:** _TODO: fill in your full name_
-**Student number:** _TODO: fill in your student number_
+**Student name: Nicoleta Pavelescu
+**Student number: 404194
 
-> Both TODOs above must be filled in before submission — the assignment
-> requires them in the README.
 
 ## 1. Description
 
